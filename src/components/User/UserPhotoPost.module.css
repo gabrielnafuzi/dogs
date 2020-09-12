@@ -1,0 +1,54 @@
+.photoPost {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 40rem) {
+  .photoPost {
+    grid-template-columns: 1fr;
+  }
+}
+
+.file {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.file + .imgLabel {
+  background: #d4d4d4;
+  box-shadow: 0 6px #bababa;
+  transition: none;
+  border: 2px solid transparent;
+  border-radius: 0.4rem;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom: 1.6rem;
+  outline: none;
+  padding: 0.6rem 2.3rem;
+  position: relative;
+  vertical-align: middle;
+}
+
+.file + .imgLabel:hover,
+.file:focus + .imgLabel {
+  box-shadow: 0 4px #bababa;
+  top: 2px;
+}
+
+.preview {
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center center;
+}
+
+.preview::after {
+  content: '';
+  display: block;
+  height: 0;
+  padding-bottom: 100%;
+}
