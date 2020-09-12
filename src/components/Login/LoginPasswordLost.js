@@ -18,7 +18,7 @@ const LoginPasswordLost = () => {
     if (login.validate()) {
       const { url, options } = PASSWORD_LOST({
         login: login.value,
-        url: 'http://localhost:3000/login/reset',
+        url: 'https://dogsnfz.vercel.app/login/reset', // http://localhost:3000/login/reset
       });
 
       await request(url, options);
